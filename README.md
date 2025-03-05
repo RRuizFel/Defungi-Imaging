@@ -23,6 +23,10 @@ This project aims to classify fungal species based on their image features using
 - Classification using machine learning models like **Random Forest**, **MLP**, and their PCA-based versions.
 - Evaluation using metrics such as accuracy, precision, recall, F1-score, confusion matrix, and ROC curve.
 
+## Dataset Description
+
+The **Defungi** dataset contains images of various species of fungi. The images are organized into subdirectories, with each subdirectory representing a different fungal species. The dataset supports `.jpg`, `.jpeg`, and `.png` image formats.
+
 ## Installation Instructions
 
 1. Clone the repository:
