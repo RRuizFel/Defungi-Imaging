@@ -28,3 +28,49 @@ This project aims to classify fungal species based on their image features using
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/defungi.git
+
+## Code Functionality
+
+### Image Preprocessing
+The dataset's images are preprocessed to extract features relevant for classification tasks. Preprocessing steps include:
+
+- **Resizing** images to a fixed size (64x64).
+- **Color space transformation:** Convert images to HSV and LAB color spaces.
+- **Grayscale conversion:** For texture feature extraction.
+
+### Feature Extraction
+The following features are extracted from each image:
+
+1. **Color Histograms:** Histogram in HSV and LAB color spaces.
+2. **Texture Features:** Extracted using GLCM (Gray Level Co-occurrence Matrix) for properties like contrast, dissimilarity, homogeneity, energy, and correlation.
+3. **Local Binary Patterns (LBP)**: A method for texture analysis.
+4. **Average Intensity:** The average pixel intensity in grayscale.
+
+### Model Training and Evaluation
+The features extracted from images are used to train machine learning models:
+
+- **Random Forest Classifier.**
+- **MLP Classifier.**
+
+For each model, the following evaluation metrics are computed:
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+
+### Model Comparison
+The project compares different models:
+
+- **Random Forest vs. PCA Random Forest.**
+- **MLP vs. PCA MLP**.
+
+Performance metrics (accuracy, precision, recall, and F1 score) are visualized using bar charts for easy comparison.
+
+### Confusion Matrix and ROC Curve
+- **Confusion Matrix:** For each model, a confusion matrix is plotted to visually evaluate classification performance.
+- **ROC Curve:** The Receiver Operating Characteristic (ROC) curve is plotted for each model, displaying how well the model distinguishes between classes.
+
+## Results and Performance
+The project evaluates the performance of the machine learning models using different configurations. The following results are reported:
+- Model accuracy, precision, recall, and F1 score for both **Random Forest and MLP** classifiers.
+- Comparison of models based on their performance metrics (e.g., confusion matrix and ROC curve).
